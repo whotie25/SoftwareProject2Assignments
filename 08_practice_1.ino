@@ -7,8 +7,8 @@
 #define SND_VEL 346.0     // sound velocity at 24 celsius degree (unit: m/sec)
 #define INTERVAL 25       // sampling interval (unit: msec)
 #define PULSE_DURATION 10 // ultra-sound Pulse Duration (unit: usec)
-#define _DIST_MIN 100.0   // minimum distance to be measured (unit: mm)
-#define _DIST_MAX 300.0   // maximum distance to be measured (unit: mm)
+#define _DIST_MIN 100.0
+#define _DIST_MAX 300.0
 
 #define TIMEOUT ((INTERVAL / 2) * 1000.0) // maximum echo waiting time (unit: usec)
 #define SCALE (0.001 * 0.5 * SND_VEL) // coefficent to convert duration to distance
@@ -63,3 +63,4 @@ float USS_measure(int TRIG, int ECHO)
   
   return pulseIn(ECHO, HIGH, TIMEOUT) * SCALE;
 }
+
